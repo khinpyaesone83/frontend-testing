@@ -33,6 +33,9 @@ export const Menu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 export const MenuItem = styled.li`
   margin: 0px 10px;
@@ -65,9 +68,10 @@ export const LogoWrapper = styled.div`
   left: 80px;
   display: flex;
   justify-content: center;
-  //   border-left: 2px solid red;
-  //   border-right: 2px solid blue;
+  // border-left: 3px solid #c9c9c9;
+  // border-right: 3px solid #c9c9c9;
   padding: 20px 15px;
+  z-index: 2;
 `;
 
 export const LogoImg = styled.img`

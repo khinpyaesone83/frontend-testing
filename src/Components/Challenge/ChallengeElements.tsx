@@ -7,7 +7,10 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -21,6 +24,9 @@ export const WrapperOne = styled.div`
   justify-content: center;
   algin-items: center;
   padding: 40px;
+  @media screen and (max-width: 765px) {
+    padding: 0px;
+  }
 `;
 
 export const ImgWrapper = styled.div``;

@@ -8,6 +8,11 @@ import {
   ImgTwo,
   ImgWrapper,
   P,
+  PImg,
+  PImgFour,
+  PImgOne,
+  PImgThree,
+  PImgTwo,
   TextContainer,
   TextWrapper,
   Title,
@@ -25,6 +30,11 @@ const Problem1 = () => {
   const desktopSvg = "desktop.png";
   const p1Img = "trippro.com.hk_cn_.png";
   const p2Img = "trippro.com.hk_cn_-2.png";
+  const phoneImg1 = "trip1.png";
+  const phoneImg2 = "trip2.png";
+  const phoneImg3 = "trip3.png";
+  const phoneImg4 = "trip4.png";
+  const phone = "iphone1.png";
   return (
     <>
       <Container>
@@ -32,9 +42,13 @@ const Problem1 = () => {
           <WrapperOne>
             {change ? (
               <>
-                <Img src={desktopSvg} alt="desktopsvg" />
-                <ImgOne src={p1Img} />
-                <ImgTwo src={p2Img} />
+                <ImgWrapper>
+                  <PImg src={phone} alt="desktopsvg" />
+                  <PImgOne src={phoneImg1} />
+                  <PImgTwo src={phoneImg2} />
+                  <PImgThree src={phoneImg3} />
+                  {/* <PImgFour src={phoneImg4} /> */}
+                </ImgWrapper>
               </>
             ) : (
               <>

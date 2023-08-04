@@ -62,6 +62,10 @@ export const Dash = styled.div`
   position: absolute;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100%25' ry='100%25' stroke='%23EC3463' stroke-width='5' stroke-dasharray='238%2c115' stroke-dashoffset='172' stroke-linecap='butt'/%3e%3c/svg%3e");
   border-radius: 50%;
+  @media screen and (max-width: 765px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 export const Dash1 = styled.div`
@@ -70,6 +74,10 @@ export const Dash1 = styled.div`
   position: absolute;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100%25' ry='100%25' stroke='%23EC3463' stroke-width='5' stroke-dasharray='238%2c115' stroke-dashoffset='172' stroke-linecap='butt'/%3e%3c/svg%3e");
   border-radius: 50%;
+  @media screen and (max-width: 765px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const Dash2 = styled.div`
@@ -77,6 +85,10 @@ export const Dash2 = styled.div`
   height: 250px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100%25' ry='100%25' stroke='%23EC3463' stroke-width='5' stroke-dasharray='238%2c115' stroke-dashoffset='172' stroke-linecap='butt'/%3e%3c/svg%3e");
   border-radius: 50%;
+  @media screen and (max-width: 765px) {
+    width: 140px;
+    height: 140px;
+  }
 `;
 
 export const Button = styled.div`

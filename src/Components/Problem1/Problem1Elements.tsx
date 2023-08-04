@@ -8,9 +8,16 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: grid;
   position: relative;
+  padding: 0;
+  margin: 0px;
+  background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
+    0% no-repeat padding-box;
   grid-template-columns: 1fr 2fr;
   @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -22,10 +29,12 @@ export const WrapperOne = styled.div`
 `;
 
 export const WrapperTwo = styled.div`
-  background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
-    0% no-repeat padding-box;
+  // background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
+  //   0% no-repeat padding-box;
   height: 100%;
-  padding: 12px 0px;
+  @media screen and (max-width: 800px) {
+    padding: 12px 0px;
+  }
 `;
 export const Title = styled.h1`
   font-size: 150%;
@@ -33,6 +42,11 @@ export const Title = styled.h1`
 `;
 
 export const ImgWrapper = styled.div`
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 800px) {
     position: relative;
     display: flex;
@@ -42,37 +56,42 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 160%;
-  z-index: 2;
-  top: 0px;
-  position: absolute;
-  left: 70px;
+  width: 170%;
+  z-index: 5;
+  padding-left: 400px;
+  position: relative;
+  // top: 0px;
+  // position: absolute;
+  // left: 70px;
 
   @media screen and (max-width: 800px) {
     position: relative;
     width: 100%;
+    padding-left: 0px;
   }
 `;
 
 export const ImgOne = styled.img`
   width: 100%;
-  top: 16px;
-  z-index: 2;
-  left: 190px;
+  top: 20px;
+  z-index: 6;
+  left: 200px;
   position: absolute;
   @media screen and (max-width: 800px) {
-    width: 63%;
+    width: 55%;
+    left: 70px;
   }
 `;
 
 export const ImgTwo = styled.img`
-  width: 100%;
+  width: 130%;
   top: 15px;
   z-index: 1;
-  left: -230px;
+  left: -350px;
   position: absolute;
   @media screen and (max-width: 800px) {
     width: 63%;
+    left: -100px;
   }
 `;
 
@@ -121,3 +140,50 @@ export const Circle = styled.div`
   border-radius: 10px;
   margin: 0px 10px;
 `;
+
+export const PImg = styled.img`
+  width: 55%;
+  z-index: 5;
+  padding-left: 400px;
+  position: relative;
+  @media screen and (max-width: 800px) {
+    position: relative;
+    width: 40%;
+    padding-left: 0px;
+  }
+`;
+export const PImgOne = styled.img`
+  width: 43%;
+  z-index: 6;
+  top: 68px;
+  left: 320px;
+  position: absolute;
+  @media screen and (max-width: 800px) {
+    width: 30%;
+    top: 40px;
+    left: 120px;
+  }
+`;
+export const PImgTwo = styled.img`
+  width: 43%;
+  z-index: 6;
+  top: 68px;
+
+  position: absolute;
+  @media screen and (max-width: 800px) {
+    width: 30%;
+    left: -3px;
+  }
+`;
+export const PImgThree = styled.img`
+  width: 43%;
+  z-index: 6;
+  top: 68px;
+  left: -100px;
+  position: absolute;
+  @media screen and (max-width: 800px) {
+    width: 30%;
+    // left: 120px;
+  }
+`;
+export const PImgFour = styled.img``;

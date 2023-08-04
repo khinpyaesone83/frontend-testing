@@ -15,8 +15,20 @@ import {
   Title,
   Wrapper,
   Input,
+  Img,
+  Text,
+  SocialWrapper,
+  IconWrapper,
+  TextWrapper,
+  InputBoxWrapper,
 } from "./FooterElements";
 import { AiFillMail } from "react-icons/ai";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { Button } from "antd";
 
 const Footer = () => {
@@ -51,33 +63,26 @@ const Footer = () => {
             <Title></Title>
             <div style={{ paddingTop: "20px" }}></div>
             <Menu>
-              <MenuItem>Ecommerce Design</MenuItem>
-              <MenuItem>Woocommerce Design</MenuItem>
-              <MenuItem>Services</MenuItem>
-              <MenuItem>Services</MenuItem>
-              <MenuItem>Services</MenuItem>
+              <MenuItem>Ecommerce Development</MenuItem>
+              <MenuItem>Woocommerce Development</MenuItem>
+              <MenuItem>osCommerce Development</MenuItem>
+              <MenuItem>Magento Development</MenuItem>
+              <MenuItem>BigCommerce Development</MenuItem>
             </Menu>
           </SectionThree>
           <SectionFour>
             <Title>VISIBLE ONE SINGAPORE</Title>
             <Menu>
               <h4>+65 6248 0838</h4>
-
               <div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
+                <InputBoxWrapper>
                   <AiFillMail
                     size={20}
                     color="#fff"
                     style={{ marginRight: "10px" }}
                   />
                   <div>info@visibleone.com</div>
-                </div>
+                </InputBoxWrapper>
               </div>
               <div style={{ margin: "10px 0px" }}>
                 24 Sin Ming Lane, Midview City #07-93, Singapore 573970
@@ -105,16 +110,40 @@ const Footer = () => {
         </Wrapper>
         <BoxWrapper>
           <Box>
-            <C1></C1>
+            <C1>
+              <Img src={"paypal.png"} />
+            </C1>
             <C2>
               <small>Subscribe to our news,tips and guidlines</small>
               <InputWrapper>
                 <Input placeholder="123@test.com" />
-                <Button type="primary">Submit</Button>
+                <Button type="primary" style={{ width: "30%" }}>
+                  Submit
+                </Button>
               </InputWrapper>
             </C2>
           </Box>
         </BoxWrapper>
+        <SocialWrapper>
+          <IconWrapper>
+            <FaFacebookF size={30} />
+          </IconWrapper>
+          <IconWrapper>
+            <FaTwitter size={30} />
+          </IconWrapper>
+          <IconWrapper>
+            <FaInstagram size={30} />
+          </IconWrapper>
+          <IconWrapper>
+            <FaLinkedinIn size={30} />
+          </IconWrapper>
+        </SocialWrapper>
+        <TextWrapper>
+          <Text>Shopping T&C</Text>
+          <Text>Terms & Conditions</Text>
+          <Text>Privacy Policy</Text>
+          <Text> &copy; 2023-Visible One</Text>
+        </TextWrapper>
       </Container>
     </>
   );

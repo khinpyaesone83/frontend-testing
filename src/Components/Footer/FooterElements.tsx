@@ -4,9 +4,9 @@ export const Container = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("Footer.jpeg");
   width: 100%;
-  height: 500px;
+  height: auto;
   background-size: cover;
-  margin-top: 25px;
+  // margin-top: 25px;
   //   display: flex;
   //   align-items: center;
   //   flex-direction: column;
@@ -22,10 +22,17 @@ export const Wrapper = styled.div`
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
   @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding: 20px;
   }
 `;
-
+export const InputBoxWrapper = styled.div`
+  display: flex;
+`;
 export const SectionOne = styled.div``;
 export const SectionTwo = styled.div``;
 export const SectionThree = styled.div``;
@@ -53,9 +60,17 @@ export const Box = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 765px) {
+    height: 100px;
+    flex-direction: column;
+  }
 `;
 export const C1 = styled.div``;
-export const C2 = styled.div``;
+export const C2 = styled.div`
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+  }
+`;
 
 export const InputWrapper = styled.div`
   display: flex;
@@ -69,4 +84,41 @@ export const Input = styled.input`
   background-color: transparent;
   border: 1px solid #fff;
   outline: none;
+  margin-bottom: 5px;
+  @media screen and (max-width: 765px) {
+    width: 150px;
+  }
+`;
+
+export const Img = styled.img`
+  width: 30%;
+  @media screen and (max-width: 765px) {
+    width: 50%;
+  }
+`;
+
+export const SocialWrapper = styled.div`
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+`;
+
+export const IconWrapper = styled.div`
+  padding: 5px;
+  cursor: pointer;
+`;
+export const TextWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+  }
+`;
+
+export const Text = styled.small`
+  padding: 10px;
 `;
