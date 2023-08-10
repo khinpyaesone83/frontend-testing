@@ -7,6 +7,7 @@ import About from "./Components/About/About";
 import Challenge from "./Components/Challenge/Challenge";
 import Problem1 from "./Components/Problem1/Problem1";
 import Footer from "./Components/Footer/Footer";
+import { motion } from "framer-motion";
 
 function App() {
   return (

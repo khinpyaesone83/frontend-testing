@@ -14,7 +14,7 @@ import {
   CardContainer,
   ContainerTwo,
 } from "./ChallengeElements";
-import { Element, Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 interface Datatype {
   id: number;
@@ -41,7 +41,13 @@ const Challenge = () => {
     <>
       <Container>
         <WrapperOne>
-          <Img src={challengeImg} alt="challengeImg" />
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Img src={challengeImg} alt="challengeImg" />
+          </motion.div>
         </WrapperOne>
         <WrapperTwo>
           <Header>
@@ -51,9 +57,9 @@ const Challenge = () => {
           </Header>
           <CardContainer>
             {data?.map((item) => (
-              <Card>
-                <Number>{item?.id}</Number>
-                <P>{item?.title}</P>
+              <Card key={item?.id} color={item?.id.toString()}>
+                <Number color={item?.id.toString()}>{item?.id}</Number>
+                <P color={item?.id.toString()}>{item?.title}</P>
               </Card>
             ))}
           </CardContainer>

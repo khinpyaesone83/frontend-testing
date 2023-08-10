@@ -10,6 +10,7 @@ import {
   Title,
   Wrapper,
 } from "./HomeElements";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const responsiveSvg = "/svg/responsive.svg";
@@ -43,10 +44,17 @@ const Home = () => {
           <Img src={shoppingCart} />
         </Item>
       </ItemContainer>
-      <ImgWrapper>
-        <LaptopImg src={laptopImg} />
-        <LaptopPicture src={laptopPicture} />
-      </ImgWrapper>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        // viewport={{ once: true }}
+      >
+        <ImgWrapper>
+          <LaptopImg src={laptopImg} />
+          <LaptopPicture src={laptopPicture} />
+        </ImgWrapper>
+      </motion.div>
     </Wrapper>
   );
 };

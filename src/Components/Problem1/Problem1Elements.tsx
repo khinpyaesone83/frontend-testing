@@ -10,8 +10,8 @@ export const Wrapper = styled.div`
   position: relative;
   padding: 0;
   margin: 0px;
-  background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
-    0% no-repeat padding-box;
+  // background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
+  //   0% no-repeat padding-box;
   grid-template-columns: 1fr 2fr;
   @media screen and (max-width: 800px) {
     display: flex;
@@ -29,8 +29,8 @@ export const WrapperOne = styled.div`
 `;
 
 export const WrapperTwo = styled.div`
-  // background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
-  //   0% no-repeat padding-box;
+  background: transparent linear-gradient(113deg, #3ae7ab 0%, #2dc4ea 100%) 0%
+    0% no-repeat padding-box;
   height: 100%;
   @media screen and (max-width: 800px) {
     padding: 12px 0px;
@@ -42,11 +42,11 @@ export const Title = styled.h1`
 `;
 
 export const ImgWrapper = styled.div`
-  background-color: #fff;
+  // background-color: red;
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   @media screen and (max-width: 800px) {
     position: relative;
     display: flex;
@@ -56,9 +56,9 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 170%;
+  width: 175%;
   z-index: 5;
-  padding-left: 400px;
+  padding-left: 350px;
   position: relative;
   // top: 0px;
   // position: absolute;
@@ -72,7 +72,7 @@ export const Img = styled.img`
 `;
 
 export const ImgOne = styled.img`
-  width: 100%;
+  width: 95%;
   top: 20px;
   z-index: 6;
   left: 200px;
@@ -84,10 +84,10 @@ export const ImgOne = styled.img`
 `;
 
 export const ImgTwo = styled.img`
-  width: 130%;
+  width: 110%;
   top: 15px;
   z-index: 1;
-  left: -350px;
+  left: -300px;
   position: absolute;
   @media screen and (max-width: 800px) {
     width: 63%;
@@ -142,33 +142,34 @@ export const Circle = styled.div`
 `;
 
 export const PImg = styled.img`
-  width: 55%;
+  width: 60%;
   z-index: 5;
-  padding-left: 400px;
+  left: 370px;
+  // margin-left: 500px;
+  // position: absolute;
+  top: 0px;
   position: relative;
   @media screen and (max-width: 800px) {
-    position: relative;
     width: 40%;
-    padding-left: 0px;
+    left: 150px;
   }
 `;
 export const PImgOne = styled.img`
-  width: 43%;
+  width: 47%;
   z-index: 6;
-  top: 68px;
-  left: 320px;
+  top: 60px;
+  left: 393px;
   position: absolute;
   @media screen and (max-width: 800px) {
     width: 30%;
     top: 40px;
-    left: 120px;
+    left: 170px;
   }
 `;
 export const PImgTwo = styled.img`
   width: 43%;
   z-index: 6;
   top: 68px;
-
   position: absolute;
   @media screen and (max-width: 800px) {
     width: 30%;
@@ -179,11 +180,21 @@ export const PImgThree = styled.img`
   width: 43%;
   z-index: 6;
   top: 68px;
-  left: -100px;
+  left: 40px;
   position: absolute;
   @media screen and (max-width: 800px) {
     width: 30%;
     // left: 120px;
   }
 `;
-export const PImgFour = styled.img``;
+export const PImgFour = styled.img`
+  width: 43%;
+  z-index: 6;
+  top: 68px;
+  left: -90px;
+  position: absolute;
+  @media screen and (max-width: 800px) {
+    width: 30%;
+    // left: 120px;
+  }
+`;

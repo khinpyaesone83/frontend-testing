@@ -23,6 +23,7 @@ import {
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { BiMobileAlt } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const Problem1 = () => {
   const [change, setChange] = useState<boolean>(false);
@@ -42,51 +43,84 @@ const Problem1 = () => {
           <WrapperOne>
             {change ? (
               <>
-                <ImgWrapper>
-                  <PImg src={phone} alt="desktopsvg" />
-                  <PImgOne src={phoneImg1} />
-                  <PImgTwo src={phoneImg2} />
-                  <PImgThree src={phoneImg3} />
-                  {/* <PImgFour src={phoneImg4} /> */}
-                </ImgWrapper>
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <ImgWrapper>
+                    <div style={{ position: "relative" }}>
+                      <PImg src={phone} alt="phonesvg" />
+                      <PImgOne src={phoneImg1} />
+                      <PImgTwo src={phoneImg2} />
+                      <PImgThree src={phoneImg3} />
+
+                      <PImgFour src={phoneImg4} />
+                    </div>
+                  </ImgWrapper>
+                </motion.div>
               </>
             ) : (
               <>
-                <ImgWrapper>
-                  <Img src={desktopSvg} alt="desktopsvg" />
-                  <ImgOne src={p1Img} />
-                  <ImgTwo src={p2Img} />
-                </ImgWrapper>
+                <motion.div
+                  initial={{ x: "-100%", opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <ImgWrapper>
+                    <Img src={desktopSvg} alt="desktopsvg" />
+                    <ImgOne src={p1Img} />
+                    <ImgTwo src={p2Img} />
+                  </ImgWrapper>
+                </motion.div>
               </>
             )}
           </WrapperOne>
           <WrapperTwo>
             <TextWrapper>
               <Title>Their Old Website & Problems</Title>
-              <TextContainer>
-                <AiOutlineArrowRight size={20} color="#fff" />
-                <P>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  voluptate quod nostrum error sapiente neque eaque tempora
-                  placeat explicabo alias.
-                </P>
-              </TextContainer>
-              <TextContainer>
-                <AiOutlineArrowRight size={20} color="#fff" />
-                <P>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  voluptate quod nostrum error sapiente neque eaque tempora
-                  placeat explicabo alias.
-                </P>
-              </TextContainer>
-              <TextContainer>
-                <AiOutlineArrowRight size={20} color="#fff" />
-                <P>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                  voluptate quod nostrum error sapiente neque eaque tempora
-                  placeat explicabo alias.
-                </P>
-              </TextContainer>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <TextContainer>
+                  <AiOutlineArrowRight size={20} color="#fff" />
+                  <P>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    voluptate quod nostrum error sapiente neque eaque tempora
+                    placeat explicabo alias.
+                  </P>
+                </TextContainer>
+              </motion.div>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <TextContainer>
+                  <AiOutlineArrowRight size={20} color="#fff" />
+                  <P>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    voluptate quod nostrum error sapiente neque eaque tempora
+                    placeat explicabo alias.
+                  </P>
+                </TextContainer>
+              </motion.div>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1.2 }}
+              >
+                <TextContainer>
+                  <AiOutlineArrowRight size={20} color="#fff" />
+                  <P>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    voluptate quod nostrum error sapiente neque eaque tempora
+                    placeat explicabo alias.
+                  </P>
+                </TextContainer>
+              </motion.div>
               <MdKeyboardArrowLeft size={30} color="#fff" />
               <MdKeyboardArrowRight size={30} color="#fff" />
               {change ? (

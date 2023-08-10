@@ -52,8 +52,12 @@ export const Title = styled.h1`
 `;
 
 export const Card = styled.div`
-  background: transparent linear-gradient(90deg, #2dc4ea 0%, #3ae7ab 100%) 0% 0%
-    no-repeat padding-box;
+  background: ${(props) =>
+    props.color === "1"
+      ? "transparent linear-gradient(90deg, #2dc4ea 0%, #3ae7ab 100%) 0% 0% no-repeat padding-box"
+      : "#fff"};
+  // background: transparent linear-gradient(90deg, #2dc4ea 0%, #3ae7ab 100%) 0% 0%
+  // no-repeat padding-box;
   box-shadow: 0px 3px 10px #0000004d;
   display: flex;
   align-items: center;
@@ -64,11 +68,11 @@ export const Card = styled.div`
 
 export const Number = styled.h2`
   margin-right: 15px;
-  color: #fff;
+  color: ${(props) => (props.color === "1" ? "#f0f0f0" : "#2DC4EA")};
   opacity: 0.5;
 `;
 export const P = styled.p`
-  color: #fff;
+  color: ${(props) => (props.color === "1" ? "#f0f0f0" : "##000")};
 `;
 
 export const Button = styled.div`
